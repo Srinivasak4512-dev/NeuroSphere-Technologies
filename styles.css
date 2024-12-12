@@ -4,191 +4,213 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-  }
-  
-  /* Body Styling */
-  body {
+}
+
+/* Body Styling */
+body {
     background-color: #f4f4f4;
     color: #333;
-  }
-  
-  /* Navbar Styling */
-  header {
+}
+
+/* Navbar Styling */
+header {
     background-color: #2c3e50;
     padding: 20px 0;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-  }
-  
-  .navbar .logo h1 {
+}
+
+.navbar .logo h1 {
     color: #ecf0f1;
     font-size: 1.8rem;
-  }
-  
-  .navbar nav ul {
+}
+
+.navbar nav ul {
     list-style: none;
     display: flex;
-  }
-  
-  .navbar nav ul li {
+}
+
+.navbar nav ul li {
     margin-left: 20px;
-  }
-  
-  .navbar nav ul li a {
+}
+
+.navbar nav ul li a {
     text-decoration: none;
     color: #ecf0f1;
     font-size: 1.1rem;
-  }
-  
-  .navbar nav ul li a:hover {
+}
+
+.navbar nav ul li a:hover {
     text-decoration: underline;
-  }
-  
-  /* Hero Section Styling */
-  .hero {
-    background-color: #3498db;
-    color: #fff;
-    padding: 80px 50px;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-  }
-  
-  .hero h2 {
+    color: white;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Send video to the background */
+}
+
+.hero-content {
+    z-index: 1; /* Ensure content appears above the video */
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-  }
-  
-  .hero p {
+}
+
+.hero p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-  }
-  
-  .cta-button {
-    background-color: #e74c3c;
-    color: #fff;
-    padding: 15px 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.1rem;
-  }
-  
-  .cta-button:hover {
-    background-color: #c0392b;
-  }
-  
-  /* About Section Styling */
-  .about {
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* About Section Styling */
+.about {
     padding: 50px 20px;
     text-align: center;
     background-color: #fff;
-  }
-  
-  .about h2 {
+}
+
+.about h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-  }
-  
-  .about p {
+}
+
+.about p {
     font-size: 1.2rem;
     line-height: 1.6;
-  }
-  
-  /* Services Section Styling */
-  .services {
+}
+
+/* Services Section Styling */
+.services {
     padding: 50px 20px;
     background-color: #ecf0f1;
     text-align: center;
-  }
-  
-  .services h2 {
+}
+
+.services h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-  }
-  
-  .service-cards {
+}
+
+.service-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
-  
-  .service-card {
+}
+
+.service-card {
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
     width: 250px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-card h3 {
+}
+
+.service-card h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-  }
-  
-  .service-card p {
+}
+
+.service-card p {
     font-size: 1.1rem;
     line-height: 1.6;
-  }
-  
-  /* Contact Section Styling */
-  .contact {
+}
+
+/* Contact Section Styling */
+.contact {
     padding: 50px 20px;
     text-align: center;
     background-color: #fff;
-  }
-  
-  .contact h2 {
+}
+
+.contact h2 {
     font-size: 2rem;
     margin-bottom: 30px;
-  }
-  
-  form {
+}
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  form label {
+}
+
+form label {
     font-size: 1.2rem;
     margin-bottom: 5px;
-  }
-  
-  form input,
-  form textarea {
+}
+
+form input,
+form textarea {
     width: 80%;
     padding: 10px;
     margin-bottom: 15px;
     font-size: 1.1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
-  }
-  
-  form button {
+}
+
+form button {
     background-color: #3498db;
     color: #fff;
     padding: 15px 30px;
     font-size: 1.1rem;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  form button:hover {
+}
+
+form button:hover {
     background-color: #2980b9;
-  }
-  
-  /* Footer Styling */
-  footer {
+}
+
+/* Footer Styling */
+footer {
     background-color: #2c3e50;
     color: #fff;
     padding: 20px;
     text-align: center;
-  }
-  
-  footer p {
+}
+
+footer p {
     font-size: 1rem;
-  }
-  
+}
